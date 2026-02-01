@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>February Calendar - Valentine's Surprise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="floating-hearts">
+        <div class="floating-heart">💖</div>
+        <div class="floating-heart">💕</div>
+        <div class="floating-heart">💗</div>
+        <div class="floating-heart">💓</div>
+        <div class="floating-heart">💘</div>
+        <div class="floating-heart">💌</div>
+    </div>
+
+    <!-- Landing Page -->
+    <div class="landing-page" id="landingPage">
+        <div class="container">
+            <h1>Hey Darling 💕</h1>
+            <p class="message">
+                Every day with you feels like Valentine's Day.<br>
+                You are my sunshine, my moon, and my stars.<br>
+                I have something special waiting for you...
+            </p>
+            <div class="gift-container" onclick="openCalendar()">
+                <div class="gift">🎁</div>
+                <p class="gift-text">Click to open your gift!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Calendar Page -->
+    <div class="calendar-page" id="calendarPage">
+        <div class="container">
+            <h1>February 2024</h1>
+            <p class="subtitle">A month of love and surprises 💕</p>
+
+            <div class="calendar">
+                <div class="day-name">Sun</div>
+                <div class="day-name">Mon</div>
+                <div class="day-name">Tue</div>
+                <div class="day-name">Wed</div>
+                <div class="day-name">Thu</div>
+                <div class="day-name">Fri</div>
+                <div class="day-name">Sat</div>
+
+                <!-- Empty cells for days before February 1st -->
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="day">1</div>
+                <div class="day">2</div>
+                <div class="day">3</div>
+                <div class="day">4</div>
+                <div class="day">5</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+                <div class="day">8</div>
+                <div class="day">9</div>
+                <div class="day">10</div>
+                <div class="day">11</div>
+                <div class="day">12</div>
+                <div class="day">13</div>
+                <div class="day valentine" onclick="openModal()">14</div>
+                <div class="day">15</div>
+                <div class="day">16</div>
+                <div class="day">17</div>
+                <div class="day">18</div>
+                <div class="day">19</div>
+                <div class="day">20</div>
+                <div class="day">21</div>
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day">24</div>
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">29</div>
+            </div>
+
+            <p class="hint">💡 Click on February 14th for a special surprise! 💕</p>
+        </div>
+    </div>
+
+    <!-- Valentine Proposal Modal -->
+    <div id="valentineModal" class="modal">
+        <div class="modal-content">
+            <h2>Will You Be My Valentine?</h2>
+            <p class="message">
+                Roses are red, violets are blue,<br>
+                My heart beats for only you.<br>
+                Will you make this Valentine's Day special<br>
+                And say yes to being my valentine?
+            </p>
+            <div class="buttons">
+                <button class="yes-btn" onclick="sayYes()">Yes! 💕</button>
+                <button class="no-btn" onclick="sayNo()">No 😢</button>
+            </div>
+            <div id="response"></div>
+        </div>
+    </div>
+
+    <!-- Love Letter Modal -->
+    <div id="loveLetterModal" class="love-letter-modal">
+        <div class="love-letter-container">
+            <!-- Envelope Button -->
+            <div class="envelope" id="envelope" onclick="openEnvelope()">
+                <div class="envelope-front">
+                    <p class="envelope-text">💕 Open Me 💕</p>
+                    <p class="envelope-hint">Tap to read my love letter</p>
+                </div>
+            </div>
+            
+            <!-- Letter Content -->
+            <div class="letter-content" id="letterContent">
+                <button class="letter-close" onclick="closeLoveLetter()">✕</button>
+                <h3>My Sweet Valentine 💕</h3>
+                
+                <!-- Her Picture -->
+                <div class="her-picture">
+                    <img src="her-photo.jpeg" alt="My Beautiful Valentine" id="herPhoto">
+                </div>
+                
+                <p>
+                    My dearest love,<br><br>
+                    From the moment I first saw you, my heart knew it had found its home. You are the melody that plays in my heart, the dream that dances in my mind, and the smile that lights up my world.<br><br>
+                    Every time I look at you, I see forever. Your eyes hold secrets I want to discover, your smile is a sunrise I want to wake up to every day, and your love is the greatest gift I've ever received.<br><br>
+                    You make me feel like the luckiest person alive. When we're apart, I count the seconds until I'm in your arms again. When we're together, time stops and the world fades away.<br><br>
+                    I love how you make me laugh, how you understand me without words, how you accept me completely, and how you make even the ordinary moments feel extraordinary.<br><br>
+                    You are my paradise, my fantasy, my everything. I want to spend every Valentine's Day, every birthday, every ordinary Tuesday wrapped in your love.<br><br>
+                    Thank you for saying yes. Thank you for making me the happiest person alive. Thank you for being mine.<br><br>
+                    Forever yours,<br>
+                    <strong style="font-family: 'Dancing Script', cursive; font-size: 2rem; color: #e91e78;">Mohammed 💕</strong><br>
+                    <span style="font-size: 1rem; color: #999;">✍️</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
